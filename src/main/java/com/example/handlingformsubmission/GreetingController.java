@@ -27,6 +27,7 @@ public class GreetingController {
         
         int num1 = Integer.parseInt(request.getParameter("Pnumero"));
         int num2 = Integer.parseInt(request.getParameter("Snumero"));
+        System.out.println(num1);
         greeting.doGet(num1, num2, op);
         model.addAttribute("result",greeting.getTot());
         return "result";
